@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>uwu</title>
-  </head>
-  <body>
-    <h1>MAKA TAKKI NK!</h1>
-  </body>
-</html>
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HelloWorldServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        response.setContentType("text/html");
+        response.getWriter().println("<html><head><title>Hello World!</title></head><body><h1>Hello World!</h1></body></html>");
+    }
+}
